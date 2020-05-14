@@ -1,14 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import Project from "./components/Project";
+import * as serviceWorker from "./serviceWorker";
+
+let mountPoint = document.getElementById("root");
+
+const { href } = window.location;
+console.log(href);
+
+const projectId = href.substring(href.lastIndexOf("/") + 1);
+console.log(projectId);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <Project projectId={projectId} />
   </React.StrictMode>,
-  document.getElementById('root')
+  mountPoint
 );
 
 // If you want your app to work offline and load faster, you can change
