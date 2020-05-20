@@ -1,0 +1,9 @@
+.project {
+    padding: 1rem 15%;
+    background-color: #ffffff;
+}
+
+.experiment__list {
+    padding: 0;
+    list-style: none;
+}
