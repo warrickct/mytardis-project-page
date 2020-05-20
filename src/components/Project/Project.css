@@ -3,7 +3,24 @@
     background-color: #ffffff;
 }
 
-.experiment__list {
+.experiment__table {
+    margin-top: 1rem;
     padding: 0;
-    list-style: none;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.project__name {
+    margin-top: 0.2rem;
+    font-weight: 650;
+}
+
+.project__label {
+    font-weight: 600;
+    margin-bottom: 0rem;
+}
+
+.table__header {
+    font-weight: 600;
+    margin-bottom: 0.2rem;
 }

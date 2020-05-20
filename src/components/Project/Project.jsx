@@ -6,6 +6,7 @@ const experimentList = (projectId) => {
   let experiments = [];
   for (let i = 0; i < 20; i++) {
     experiments.push({
+        id: i,
       name: "project__" + projectId + "_experiment__" + i,
       description: "This is the description for experiment #" + i,
     });
@@ -61,14 +62,15 @@ const Project = ({ projectId }) => {
 
   return (
     <div className="project">
-      <h2>Project</h2>
+      <h2 className="project__label">Project</h2>
       <h1 className="project__name">{projectData.name}</h1>
       <div className="project__description">{projectData.description}</div>
-      <ul className="experiment__list">
+      <h3 className="table__header">Experiments in this project</h3>
+      <table className="experiment__table">
         {experimentList(projectId).map((experiment) => {
           return <Experiment experiment={experiment} />;
         })}
-      </ul>
+      </table>
     </div>
   );
 };
