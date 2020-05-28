@@ -14,6 +14,15 @@ const experimentList = (projectId) => {
   return experiments;
 };
 
+async function getExperimentList(projectId) {
+  let response = await fetch(
+    `http://130.216.218.45:80/api/v1/experiment/?project__id=${projectId}`
+  );
+  let data = await response.json();
+  // data probably isn't a list, need to access the field containing the list.
+  return data.objects;
+}
+
 async function fetchProject(projectId) {
   let response = await fetch(
     `http://130.216.218.45:80/api/v1/project/?id=${projectId}`
