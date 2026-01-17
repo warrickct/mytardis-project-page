@@ -32,6 +32,6 @@
     ]
   },
   "devDependencies": {
-    "storybook": "^5.3.18"
+    "storybook": "^10.1.11"
   }
 }
